@@ -1,6 +1,6 @@
 :root {
     --border-radius: 15px;
-    --spacing: 5px;
+    --spacing: 2px;
     --spacing-color: #000000;
     --accent-color: #16b673;
     --immersive: 0;
@@ -21,14 +21,14 @@
         border-top-right-radius: var(--border-radius) !important;
         border-bottom-right-radius: var(--border-radius) !important;
         border: 0px solid transparent !important;
-        /* margin-left: calc(var(--spacing) * 2) !important; */
+        margin-left: calc(var(--spacing) * 2) !important;
     }
 
     &.bordered.right {
         border-top-left-radius: var(--border-radius) !important;
         border-bottom-left-radius: var(--border-radius) !important;
         border: 0px solid transparent !important;
-        /* margin-right: calc(var(--spacing) * 2) !important; */
+        margin-right: calc(var(--spacing) * 2) !important;
     }
 }
 
@@ -37,24 +37,25 @@
     border-radius: var(--border-radius) !important;
     display: flex;
     flex-direction: column;
-    padding: 0px 5px !important;
+    padding: 5px 5px !important;
+    border: 2px solid var(--accent-color) !important;
 
     &.left {
-        margin-top: calc(var(--spacing) * 0) !important;
-        margin-bottom: calc(var(--spacing) * 0) !important;
+        margin-top: calc(var(--spacing) * 2) !important;
+        margin-bottom: calc(var(--spacing) * 2) !important;
         margin-right: calc(var(--spacing) * 1) !important;
         margin-left: calc(var(--spacing) * 2) !important;
         width: calc(100% - var(--spacing) * 3) !important;
-        /* height: calc(100% - var(--spacing) * 0) !important; */
+        height: calc(100% - var(--spacing) * 4) !important;
     }
 
     &.right {
-        margin-top: calc(var(--spacing) * 0) !important;
-        margin-bottom: calc(var(--spacing) * 0) !important;
+        margin-top: calc(var(--spacing) * 2) !important;
+        margin-bottom: calc(var(--spacing) * 2) !important;
         margin-right: calc(var(--spacing) * 2) !important;
         margin-left: calc(var(--spacing) * 1) !important;
         width: calc(100% - var(--spacing) * 3) !important;
-        /* height: calc(100% - var(--spacing) * 0) !important; */
+        height: calc(100% - var(--spacing) * 4) !important;
     }
 
     * {
@@ -69,20 +70,37 @@
     .monaco-button-dropdown .monaco-button-dropdown-separator {
         display: none !important;
     }
+
+
+    .split-view-view {
+        height: 100% !important;
+    }
+
+    .content {
+        height: 100% !important;
+    }
+
 }
 
+.extensions-viewlet>.header>.extensions-search-container>.extensions-search-actions-container {
+    right: 10px !important;
+}
+
+
+
 .part.editor {
-    margin-top: calc(var(--spacing) * 0) !important;
-    margin-bottom: calc(var(--spacing) * 0) !important;
+    margin-top: calc(var(--spacing) * 2) !important;
+    margin-bottom: calc(var(--spacing) * 2) !important;
     margin-right: calc(var(--spacing) * 1) !important;
     margin-left: calc(var(--spacing) * 1) !important;
     width: calc(100% - var(--spacing) * 2) !important;
-    /* height: calc(100% - var(--spacing) * 0) !important; */
+    height: calc(100% - var(--spacing) * 4) !important;
     border-radius: var(--border-radius) !important;
+    border: 2px solid var(--accent-color) !important;
 
     /* -----some adjustments----- */
     >.content .editor-group-container>.title {
-        width: calc(100% - var(--spacing) * 2) !important;
+        width: calc(100% - var(--spacing) * 4) !important;
 
         .editor-actions {
             position: unset !important;
@@ -100,10 +118,11 @@
     border-radius: var(--border-radius) !important;
     display: flex;
     flex-direction: column;
-    padding: 0px 5px !important;
+    padding: 0px 0px !important;
+    border: 2px solid var(--accent-color) !important;
 
     &.bottom {
-        margin-top: calc(var(--spacing) * 2) !important;
+        margin-top: calc(var(--spacing) * 0) !important;
         margin-bottom: calc(var(--spacing) * 0) !important;
         margin-right: calc(var(--spacing) * 1) !important;
         margin-left: calc(var(--spacing) * 1) !important;
@@ -113,7 +132,7 @@
 
     &.top {
         margin-top: calc(var(--spacing) * 0) !important;
-        margin-bottom: calc(var(--spacing) * 2) !important;
+        margin-bottom: calc(var(--spacing) * 0) !important;
         margin-right: calc(var(--spacing) * 1) !important;
         margin-left: calc(var(--spacing) * 1) !important;
         width: calc(100% - var(--spacing) * 2) !important;
@@ -122,11 +141,11 @@
 
     /* -----some adjustments----- */
     .monaco-list-row {
-        max-width: 97% !important;
+        max-width: 100% !important;
     }
 
     .integrated-terminal .tabs-container {
-        width: calc(100% - var(--spacing) * 2 - 10px) !important;
+        width: calc(100% - var(--spacing) * 4 - 10px) !important;
     }
 
     .repl:has(div.repl-tree.monaco-mouse-cursor-text.word-wrap) {
@@ -161,8 +180,8 @@
 .suggest-details,
 .notificatin .editor-widget.parameter-hints-widget.visible {
     border-radius: 6px !important;
-    /* margin-right: 4px !important; */
-    /* max-width: calc(100% - 4px) !important; */
+    margin-right: 4px !important;
+    max-width: calc(100% - 4px) !important;
 }
 
 .part.editor .tabs-container {
@@ -353,6 +372,9 @@
 }
 
 .part.statusbar {
+    border: 1px solid var(--accent-color) !important;
+    border-radius: var(--border-radius);
+
     .codicon-error {
         color: #ff3377 !important;
     }
