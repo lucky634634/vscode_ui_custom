@@ -71,15 +71,6 @@
         display: none !important;
     }
 
-
-    .split-view-view {
-        height: 100% !important;
-    }
-
-    .content {
-        height: 100% !important;
-    }
-
     .composite.title {
         height: 25px !important;
         display: flex;
