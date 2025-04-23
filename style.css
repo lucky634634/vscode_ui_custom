@@ -426,16 +426,20 @@
 }
 
 .line-numbers.active-line-number {
-    transform: scale(1.25) translateX(-3px);
-    animation: .2s ease-out scaleSize;
+    transform: scale(1.5) translateX(-3px);
+    animation: .25s ease-in-out scaleSize;
 }
 
 @keyframes scaleSize {
     0% {
-        transform: scale(.75)
+        transform: scale(1)
     }
 
     100% {
-        transform: scale(1.35) translateX(-3px);
+        transform: scale(1.5) translateX(-3px);
     }
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container>.title {
+    background-color: #000 !important;
 }
