@@ -87,8 +87,6 @@
     right: 10px !important;
 }
 
-
-
 .part.editor {
     margin-top: calc(var(--spacing) * 2) !important;
     margin-bottom: calc(var(--spacing) * 2) !important;
