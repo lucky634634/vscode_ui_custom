@@ -1,17 +1,19 @@
 :root {
     --border-radius: 15px;
+    --border-size: 2px;
     --spacing: 2px;
     --spacing-color: #000000;
     --accent-color: #16b673;
     --immersive: 0;
+    --font: 'FiraCode Nerd Font Mono', Consolas, 'Courier New', monospace;
 }
 
 .titlebar-center {
-    font-family: 'FiraCode Nerd Font Mono', Consolas, 'Courier New', monospace;
+    font-family: var(--font);
 }
 
 .monaco-workbench {
-    font-family: 'FiraCode Nerd Font Mono', Consolas, 'Courier New', monospace;
+    font-family: var(--font);
     font-weight: 500 !important;
     background-color: var(--spacing-color) !important;
 }
@@ -38,7 +40,7 @@
     display: flex;
     flex-direction: column;
     padding: 0px 5px !important;
-    border: 2px solid var(--accent-color) !important;
+    border: var(--border-size) solid var(--accent-color) !important;
 
     &.left {
         margin-top: calc(var(--spacing) * 2) !important;
@@ -72,7 +74,7 @@
     }
 
     .composite.title {
-        height: 25px !important;
+        height: 20px !important;
         display: flex;
         padding: 0px;
         margin: 0px;
@@ -95,7 +97,7 @@
     width: calc(100% - var(--spacing) * 2) !important;
     height: calc(100% - var(--spacing) * 4) !important;
     border-radius: var(--border-radius) !important;
-    border: 2px solid var(--accent-color) !important;
+    border: var(--border-size) solid var(--accent-color) !important;
 
     /* -----some adjustments----- */
     >.content .editor-group-container>.title {
@@ -118,7 +120,7 @@
     display: flex;
     flex-direction: column;
     padding: 0px 0px !important;
-    border: 2px solid var(--accent-color) !important;
+    border: var(--border-size) solid var(--accent-color) !important;
 
     &.bottom {
         margin-top: calc(var(--spacing) * 0) !important;
@@ -336,7 +338,7 @@
     color: var(--vscode-sideBarTitle-foreground) !important;
     /* text-transform: none !important; */
     font-weight: 800;
-    font-size: 15px;
+    font-size: 0px;
 }
 
 .monaco-workbench .part.sidebar>.title>.title-label {
@@ -375,8 +377,15 @@
 }
 
 .part.statusbar {
-    border: 1px solid var(--accent-color) !important;
+    border: var(--border-size) solid var(--accent-color) !important;
     border-radius: var(--border-radius);
+    font-family: var(--font);
+    font-weight: normal;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-feature-settings: "liga" 1;
+    letter-spacing: 0;
+    font-display: block;
 
     .codicon-error {
         color: #ff3377 !important;
